@@ -48,8 +48,8 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-a.active {
+.header--nav-hover:hover,
+.header--nav-hover.active {
   color: var(--main-color);
   text-decoration: overline var(--main-color);
   text-underline-offset: 0.25rem;
