@@ -1,0 +1,29 @@
+/* FONT FAMILY */
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  /* COLORS */
+  --main-color: #0065fc;
+  --main-bg-color: #f2f2f2;
+  --grey-color: #d9d9d9;
+  --filter-bg-color: #deebff;
+  --font-color: #000000;
+
+  /* FONT */
+  --font-information-weight: 400;
+  --font-information-size: 1rem;
+  --font-information-height: normal;
+
+  --font-card-title-weight: 700;
+  --font-card-title-size: 1rem;
+  --font-card-title-height: normal;
+
+  --font-title-section-weight: 700;
+  --font-title-section-size: 1.375rem;
+  --font-title-section-height: normal;
+
+  /* BORDER RADIUS */
+  --border-radius: 20px;
+}
