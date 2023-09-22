@@ -28,6 +28,15 @@ body {
   height: 1rem;
 }
 
+.header-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
 .header--nav {
   display: flex;
   align-items: center;
