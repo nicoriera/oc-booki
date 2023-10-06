@@ -1,4 +1,41 @@
-@import "variables.css";
+/****** Variables ***********/
+/* FONT FAMILY */
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  /* COLORS */
+  --main-color: #0065fc;
+  --main-bg-color: #f2f2f2;
+  --grey-color: #d9d9d9;
+  --filter-bg-color: #deebff;
+  --font-color: #000000;
+
+  /* FONT */
+  --font-information-weight: 400;
+  --font-information-size: 1rem;
+  --font-information-height: normal;
+
+  --font-card-title-weight: 700;
+  --font-card-title-size: 1rem;
+  --font-card-title-height: normal;
+
+  --font-footer-title-weight: 700;
+  --font-footer-title-size: 1.125rem;
+  --font-footer-title-height: normal;
+
+  --font-title-section-weight: 700;
+  --font-title-section-size: 1.375rem;
+  --font-title-section-height: normal;
+
+  /* BORDER RADIUS */
+  --border-radius: 1rem;
+  --border-radius-filter: 2rem;
+  --border-radius-img: 1.25rem;
+
+  --box-shadow: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
 
 /****** General ***********/
 .fa-solid {
@@ -26,7 +63,7 @@ body {
   background-color: white;
   border-radius: var(--border-radius);
   padding: 5px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  filter: var(--box-shadow);
 }
 
 .card img {
@@ -38,7 +75,7 @@ body {
 }
 
 .euro {
-  font-weight: var(--font-title-section-size);
+  font-weight: var(--font-title-section-weight);
 }
 
 .neutral-star {
@@ -154,6 +191,10 @@ ul {
   border-bottom-right-radius: var(--border-radius);
 }
 
+.search-bar-button:hover {
+  cursor: pointer;
+}
+
 .hide {
   display: block;
 }
@@ -239,11 +280,15 @@ ul {
   align-items: center;
   padding-bottom: 0px;
   border-radius: var(--border-radius);
-  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+  filter: var(--box-shadow);
   background-color: white;
   gap: 0.25rem;
   flex: 1 0 0;
   border: 5px solid white;
+}
+
+.hebergment-card:hover {
+  cursor: pointer;
 }
 
 .hebergment-card img {
@@ -293,8 +338,7 @@ ul {
 .populaires-cards img {
   width: 33%;
   height: 136px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-radius: 0.8rem 0 0 0.8rem;
 }
 
 .populaires-cards .card-content {
@@ -322,47 +366,61 @@ ul {
 /* ACTIVITES */
 
 .activites section {
+  display: flex;
   padding: 30px;
-  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  align-self: stretch;
 }
 
 .activites-cards {
   display: flex;
+  height: 27rem;
   align-items: flex-start;
   gap: 1.875rem;
   align-self: stretch;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-  border: 1px solid blue;
 }
 
 .activite-card {
   display: flex;
-  flex: 1 0 0;
-  height: 27.4375rem;
+  position: relative;
+  justify-content: flex-end;
   flex-direction: column;
-  align-items: center;
+  flex: 1 0 0;
   border-radius: var(--border-radius);
-  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
-  border: 1px solid green;
-  overflow: hidden;
+  filter: var(--box-shadow);
 }
 
-.activite-card img {
-  width: 100%;
-  height: 23.75rem;
-  flex-shrink: 0;
-  object-fit: cover;
-  object-position: center;
+.activite-card:hover {
+  cursor: pointer;
+}
+
+.background-image-div {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 23rem;
   align-self: stretch;
-  border-radius: 1.25rem 1.25rem 0 0;
-  border: 1px solid red;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .activite-card p {
+  position: absolute;
+  display: flex;
+  width: 86.5%;
+  height: 4.375rem;
+  padding: 1.25rem 1.1875rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.625rem;
+  align-self: stretch;
   padding: 0 1.25rem;
-  border: 0 0 1.25rem 1.25rem;
-  border: 1px solid red;
+  border-radius: 0 0 1.25rem 1.25rem;
+  background: white;
+  bottom: -86px;
+  filter: var(--box-shadow);
 }
 
 /* FOOTER */
