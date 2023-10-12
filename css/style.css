@@ -48,6 +48,8 @@ body {
 }
 
 .main-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 1440px;
   padding: 0 50px;
@@ -105,6 +107,7 @@ ul {
   align-items: center;
   height: 25rem;
   padding-bottom: 2rem;
+  gap: 1.88rem;
 }
 
 /* HEADER NAVBAR */
@@ -151,7 +154,6 @@ ul {
 .header-section-search-search-bar {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   width: 20%;
   background: white;
@@ -216,14 +218,12 @@ ul {
 .filter-bar-container-filter {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   gap: 1rem;
 }
 
 .filter-bar-filter {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
   padding: 0rem 1.1875rem;
@@ -376,7 +376,7 @@ ul {
 
 .activites-cards {
   display: flex;
-  height: 27rem;
+  max-height: 27rem;
   align-items: flex-start;
   gap: 1.875rem;
   align-self: stretch;
@@ -384,9 +384,8 @@ ul {
 
 .activite-card {
   display: flex;
-  position: relative;
-  justify-content: flex-end;
   flex-direction: column;
+  height: 25rem;
   flex: 1 0 0;
   border-radius: var(--border-radius);
   filter: var(--box-shadow);
@@ -397,19 +396,18 @@ ul {
 }
 
 .background-image-div {
+  flex-grow: 8;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 23rem;
   align-self: stretch;
   border-radius: 1rem 1rem 0 0;
 }
 
-.activite-card p {
-  position: absolute;
+.activite-card-title {
   display: flex;
-  width: 86.5%;
-  height: 4.375rem;
+  flex-grow: 1;
+  min-height: 4rem;
   padding: 1.25rem 1.1875rem;
   flex-direction: column;
   justify-content: center;
@@ -417,10 +415,9 @@ ul {
   gap: 0.625rem;
   align-self: stretch;
   padding: 0 1.25rem;
+  margin: 0;
   border-radius: 0 0 1.25rem 1.25rem;
   background: white;
-  bottom: -86px;
-  filter: var(--box-shadow);
 }
 
 /* FOOTER */
@@ -451,6 +448,16 @@ ul {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+  .header {
+    height: 27rem;
+  }
+  .header-section-search-filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 5rem;
+    margin-bottom: 1rem;
+    gap: 0;
+  }
   .hebergements-and-populaires {
     flex-direction: column;
   }
@@ -480,6 +487,14 @@ ul {
 
   .populaires-cards .card-subtitle {
     font-size: 13px;
+  }
+
+  .activites-cards {
+    gap: 1rem;
+  }
+
+  .activite-card {
+    height: 15rem;
   }
 }
 
