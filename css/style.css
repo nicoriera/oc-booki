@@ -56,7 +56,6 @@ body {
   flex-direction: column;
   width: 100%;
   max-width: 1440px;
-  min-width: 320px;
   padding: 0 3.125rem;
   box-sizing: border-box;
 }
@@ -124,25 +123,25 @@ ul {
   padding: 1.2rem 0;
 }
 
-.header--nav {
+.header-nav {
   display: grid;
   grid-template-columns: 50% 50%;
   width: 20%;
   align-items: center;
 }
 
-.header--nav a {
+.header-nav a {
   text-align: center;
   padding-top: 1rem;
 }
 
-.header--nav a:hover {
+.header-nav a:hover {
   border-top: 2px solid var(--main-color);
   padding-top: 1rem;
 }
 
-.header--nav-hover:hover,
-.header--nav-hover.active {
+.header-nav-hover:hover,
+.header-nav-hover.active {
   color: var(--main-color);
 }
 
@@ -293,6 +292,7 @@ ul {
   gap: 0.25rem;
   flex: 1 0 0;
   border: 5px solid white;
+  height: 100%;
 }
 
 .hebergment-card img {
@@ -459,7 +459,7 @@ ul {
     height: 27rem;
   }
 
-  .header--nav {
+  .header-nav {
     width: 30%;
   }
   .header-section-search-filter-bar {
@@ -518,7 +518,7 @@ ul {
   }
   /* HEADER */
   .header {
-    height: 40rem;
+    height: 41rem;
     padding: 0rem;
   }
 
@@ -531,27 +531,27 @@ ul {
     background-color: white;
   }
 
-  .header--nav {
+  .header-nav {
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
     width: 100%;
   }
 
-  .header--nav a {
+  .header-nav a {
     border-bottom: 2px solid var(--main-bg-color);
     padding-bottom: 1rem;
     padding-top: 0;
     text-align: center;
   }
 
-  .header--nav a:hover {
+  .header-nav a:hover {
     border-top: 0;
     border-bottom: 2px solid var(--main-color);
     padding-top: 0;
   }
 
-  .header--nav a:last-child {
+  .header-nav a:last-child {
     margin-left: 0;
   }
 
@@ -561,8 +561,8 @@ ul {
     padding: 2rem;
   }
 
-  .header--nav-hover:hover,
-  .header--nav-hover.active {
+  .header-nav-hover:hover,
+  .header-nav-hover.active {
     text-decoration: 0;
   }
 
@@ -570,6 +570,7 @@ ul {
 
   .header-section-search {
     padding: 0 1rem;
+    align-items: center;
   }
   .header-section-search-search-bar {
     width: 100%;
@@ -584,11 +585,12 @@ ul {
 
   .header-section-search-filter-bar {
     height: 11rem;
+    width: 100%;
   }
 
   .filter-bar-container-filter {
     display: grid;
-    grid-template-columns: 10rem 10rem;
+    grid-template-columns: 11rem 11rem;
   }
 
   .hide {
