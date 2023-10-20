@@ -209,7 +209,7 @@ ul {
 }
 
 .show {
-  display: none !important;
+  display: none;
 }
 /* HEADER SECTION FILTERS */
 
