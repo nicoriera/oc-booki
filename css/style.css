@@ -289,7 +289,6 @@ ul {
   border-radius: var(--border-radius);
   filter: var(--box-shadow);
   background-color: white;
-  gap: 0.25rem;
   flex: 1 0 0;
   border: 5px solid white;
   height: 100%;
@@ -306,16 +305,16 @@ ul {
 .hebergement-card-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
+  justify-content: space-between;
+  gap: 0.2rem;
   align-self: stretch;
-  padding: 0rem 0.9375rem;
+  padding: 0rem 0.4rem;
 }
 
 .hebergement-card-title {
   font-size: var(--font-card-title-size);
   font-weight: var(--font-title-section-weight);
-  margin-bottom: 0;
+  margin: 0.5rem 0;
 }
 
 .hebergement-card-subtitle {
@@ -453,10 +452,18 @@ ul {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+  .main-container {
+    padding: 0 2rem;
+  }
+
+  .section-title {
+    padding-top: 1rem;
+  }
+
   /* HEADER */
 
   .header {
-    height: 27rem;
+    height: 30rem;
   }
 
   .header-nav {
@@ -480,6 +487,14 @@ ul {
     width: 100%;
   }
 
+  .hebergements-cards {
+    gap: 1.6rem;
+  }
+
+  .hebergement-card-title {
+    font-size: 0.98rem;
+  }
+
   /* POPULAIRES */
 
   .populaires {
@@ -490,11 +505,11 @@ ul {
   .populaires-cards {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 1.875rem;
   }
 
   .populaires-cards a {
-    width: 30%;
+    width: 100%;
   }
 
   /* ACTIVITES */
@@ -505,6 +520,10 @@ ul {
 
   .activite-card {
     height: 15rem;
+  }
+
+  .activites section {
+    padding: 2rem 0.3rem;
   }
 }
 
@@ -518,8 +537,13 @@ ul {
   }
   /* HEADER */
   .header {
-    height: 41rem;
+    height: 39rem;
     padding: 0rem;
+    gap: 0;
+  }
+
+  .header-section-search {
+    gap: 0;
   }
 
   /* HEADER NAVBAR */
@@ -594,6 +618,12 @@ ul {
     justify-items: stretch;
   }
 
+  /* HEADER SECTION INFO BAR */
+  .filter-bar-filter {
+    font-size: 0.8rem;
+    padding: 0rem 1rem;
+  }
+
   .hide {
     display: none;
   }
@@ -610,6 +640,7 @@ ul {
   .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 0;
+    padding: 1rem;
   }
 
   .hebergements-and-populaires section:first-child {
@@ -629,16 +660,22 @@ ul {
 
   .populaires-cards {
     flex-direction: column;
+    gap: 0;
   }
 
   .card {
     flex-direction: row;
   }
 
+  .populaires-cards .card {
+    margin-top: 1rem;
+  }
+
   /* ACTIVITES */
 
   .activites section {
     height: 70rem;
+    padding: 1rem;
   }
 
   .activites-cards {
